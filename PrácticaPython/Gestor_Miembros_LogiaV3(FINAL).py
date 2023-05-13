@@ -1,6 +1,7 @@
 from math import sqrt
 from time import sleep
 from colorama import Fore
+
 '''
 print(Fore.CYAN + "Testing colors commands" + Fore.RESET)
 print(Fore.LIGHTCYAN_EX + "Testing colors commands" + Fore.RESET)
