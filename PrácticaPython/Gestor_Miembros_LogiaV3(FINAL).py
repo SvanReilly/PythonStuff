@@ -1,7 +1,6 @@
 from math import sqrt
 from time import sleep
 from colorama import Fore
-
 '''
 print(Fore.CYAN + "Testing colors commands" + Fore.RESET)
 print(Fore.LIGHTCYAN_EX + "Testing colors commands" + Fore.RESET)
@@ -160,11 +159,11 @@ print(Fore.RED + "   0% : ..." + Fore.RESET)
 sleep(1.5)
 print(Fore.RED + "  11%" + Fore.RESET + Fore.LIGHTRED_EX + " : INICIALIZANDO SISTEMA ORBITAL CENTRALIZADO DE COMANDOS Y BUCLES." + Fore.RESET)
 sleep(1.5)
-print(Fore.RED + "  23%" + Fore.RESET + Fore.LIGHTMAGENTA_EX + " : COTEJANDO ID DE LA HERMANDAD PITAGóRICA." + Fore.RESET)
+print(Fore.RED + "  23%" + Fore.RESET + Fore.MAGENTA + " : COTEJANDO ID DE LA HERMANDAD PITAGóRICA." + Fore.RESET)
 sleep(1.5)
-print(Fore.RED + "  45%" + Fore.RESET + Fore.MAGENTA + " : COMPROBANDO AFORO MÁXIMO DEL ÁGORA VIRTUAL." + Fore.RESET)
+print(Fore.RED + "  45%" + Fore.RESET + Fore.LIGHTMAGENTA_EX + " : COMPROBANDO AFORO MÁXIMO DEL ÁGORA VIRTUAL." + Fore.RESET)
 sleep(1.5)
-print(Fore.RED + "  67%" + Fore.RESET + Fore.CYAN + " : INSERTANDO UNA TRETAKTYS DE MALA CALIDAD." + Fore.RESET)
+print(Fore.RED + "  67%" + Fore.RESET + Fore.BLUE + " : INSERTANDO UNA TRETAKTYS DE MALA CALIDAD." + Fore.RESET)
 sleep(1.5)
 print(Fore.RED + "  84%" + Fore.RESET + Fore.LIGHTBLUE_EX + " : RENDERIZANDO POCA COSA, LA VERDAD." + Fore.RESET)
 sleep(1.5)
@@ -176,6 +175,7 @@ print(Fore.LIGHTBLACK_EX + "\nPara configurar el sistema siga las siguientes ins
 sleep(1)
 
 baited = str(input("Inserte el nombre del Gran Maestre de la Orden: "))
+
 print(Fore.LIGHTBLUE_EX + "\nDEMIURGO : ¿Cómo...? ¿Cómo dices...?" + Fore.RESET)
 
 continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
@@ -194,7 +194,7 @@ print(Fore.LIGHTBLUE_EX + "DEMIURGO : Sí, sí... Su nombre es... " + Fore.LIGHT
 
 continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
 
-print(Fore.LIGHTBLUE_EX + "DEMIURGO : Su peso en ayunas era... sí, este. No está en mala forma física,\ntiene un metabolismo y ritmo circadiano envidiable *cof, cof*" + Fore.RESET)
+print(Fore.LIGHTBLUE_EX + "DEMIURGO : Su peso en ayunas era... sí, este. No está en mala forma física,\ntiene un metabolismo y ritmo circadiano envidiables *cof, cof*" + Fore.RESET)
 
 weight = 75.2
 
@@ -224,33 +224,33 @@ continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
 
 usuarioactual = seleccionarUsuario(name)
 
-print("El iniciado actual es " + Fore.LIGHTYELLOW_EX + usuarioactual["Nombre"] + Fore.RESET + "\n")
+print("El iniciado actual es el Gran Maestre " + Fore.LIGHTMAGENTA_EX + usuarioactual["Nombre"] + Fore.RESET + "\n")
+
 
 while stayCurious:
 
-    print(Fore.WHITE + "*Accedes a la Sala Suma del Consejo Primordial de MounTime Project*"
-          + "\n______________________________________________________________________"
-          + "\n"
-          + Fore.LIGHTWHITE_EX + "1. Saludo masónico."
-          + "\n"
-          + Fore.LIGHTCYAN_EX + "2. Calcular IMC"
-          + "\n"
-          + Fore.MAGENTA + "3. Comprobar mayoria de edad"
-          + "\n"
-          + Fore.LIGHTMAGENTA_EX + "4. Listar nombres de iniciados registrados en la logia"
-          + "\n"
-          + Fore.BLUE + "5. Añadir nuevo iniciado"
-          + "\n"
-          + Fore.LIGHTBLUE_EX + "6. Datos del iniciado"
-          + "\n"
-          + Fore.YELLOW + "7. Cambiar de usuario."
-          + "\n"
-          + Fore.LIGHTRED_EX + "8. Nombrar un nuevo Gran Maestre. (" + Fore.RESET + Fore.LIGHTBLUE_EX + "DEMIURGO: " + Fore.RESET + Fore.LIGHTRED_EX + "SÓLO EL GRAN MAESTRE SE ATREVERÍA A CEDER TITÁNICA DESVENTURA A OTRO MORTAL.)" + Fore.RESET
-          + "\n"
-          + Fore.WHITE + "9. Salir."
-          + "\n______________________________________________________________________")
-    sleep(0.5)
-    numMenu = str(input("Inserte un numero del 1 al 9 (preferiblemente...): " + Fore.RESET))
+    print(Fore.WHITE + "*Accedes a la Sala Suma del Consejo Primordial de MounTime Project*" + Fore.RESET + "\n______________________________________________________________________")
+    sleep(0.3)
+    print(Fore.LIGHTWHITE_EX + "1. Saludo masónico.")
+    sleep(0.3)
+    print(Fore.LIGHTCYAN_EX + "2. Calcular IMC")
+    sleep(0.3)
+    print(Fore.MAGENTA + "3. Comprobar mayoria de edad")
+    sleep(0.3)
+    print(Fore.LIGHTMAGENTA_EX + "4. Listar nombres de iniciados registrados en la logia")
+    sleep(0.3)
+    print(Fore.BLUE + "5. Añadir nuevo iniciado")
+    sleep(0.3)
+    print(Fore.LIGHTBLUE_EX + "6. Datos del iniciado")
+    sleep(0.3)
+    print(Fore.YELLOW + "7. Cambiar de usuario.")
+    sleep(0.3)
+    print(Fore.LIGHTRED_EX + "8. Nombrar un nuevo Gran Maestre. (" + Fore.RESET + Fore.LIGHTBLUE_EX + "DEMIURGO: " + Fore.RESET + Fore.LIGHTRED_EX + "SÓLO EL GRAN MAESTRE SE ATREVERÍA A CEDER TITÁNICA DESVENTURA A OTRO MORTAL.)" + Fore.RESET)
+    sleep(0.3)
+    print(Fore.LIGHTBLACK_EX + "9. Salir." + Fore.RESET)
+    sleep(0.3)
+    print("______________________________________________________________________")
+    numMenu = str(input("Inserte un número del 1 al 9 (preferiblemente...): "))
 
     if numMenu == "1":
         print(Fore.WHITE + "\n*El miembro actual muestra la marca de la estrella de 6 puntas y, a continuación, alguien se acerca estrechando su mano siguiendo el protocolo masónico.*\n" + Fore.RESET)
@@ -299,10 +299,22 @@ while stayCurious:
         continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
 
     elif numMenu == "5":
+        verdad, verdad2 = True
         name = str(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte un nuevo nombre de iniciado: " + Fore.RESET))
-        weight = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte el peso del nuevo iniciado: " + Fore.RESET))
-        height = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la altura del nuevo iniciado: " + Fore.RESET))
-        age = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la edad del nuevo iniciado: " + Fore.RESET))
+        while verdad:
+            try:
+                weight = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte el peso del nuevo iniciado: " + Fore.RESET))
+                height = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la altura del nuevo iniciado: " + Fore.RESET))
+            except ValueError:
+                print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero o decimal tanto en el peso como en la altura. Pruebe de nuevo.\n" + Fore.RESET)
+                verdad = False
+        while verdad2:
+            try:
+                age = int(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la edad del nuevo iniciado: " + Fore.RESET))
+            except ValueError:
+                print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero para la edad. Pruebe de nuevo.\n" + Fore.RESET)
+                verdad2 = False
+
         mensaje5 = agregarUsuario(name, weight, height, age)
         print(mensaje5)
         continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
