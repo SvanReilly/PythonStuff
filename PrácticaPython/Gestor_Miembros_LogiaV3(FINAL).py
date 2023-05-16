@@ -299,21 +299,29 @@ while stayCurious:
         continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
 
     elif numMenu == "5":
-        verdad, verdad2 = True
+        verdad = verdad2 = verdad3= True
         name = str(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte un nuevo nombre de iniciado: " + Fore.RESET))
         while verdad:
             try:
                 weight = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte el peso del nuevo iniciado: " + Fore.RESET))
-                height = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la altura del nuevo iniciado: " + Fore.RESET))
-            except ValueError:
-                print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero o decimal tanto en el peso como en la altura. Pruebe de nuevo.\n" + Fore.RESET)
                 verdad = False
+            except ValueError:
+                print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero o decimal para el peso. Pruebe de nuevo.\n" + Fore.RESET)
+                verdad = True
         while verdad2:
             try:
+                height = float(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la altura del nuevo iniciado: " + Fore.RESET))
+                verdad2 = False
+            except ValueError:
+                print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero o decimal para la altura. Pruebe de nuevo.\n" + Fore.RESET)
+                verdad2 = True
+        while verdad3:
+            try:
                 age = int(input(Fore.LIGHTBLUE_EX + "DEMIURGO : Inserte la edad del nuevo iniciado: " + Fore.RESET))
+                verdad3 = False
             except ValueError:
                 print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero para la edad. Pruebe de nuevo.\n" + Fore.RESET)
-                verdad2 = False
+                verdad3 = True
 
         mensaje5 = agregarUsuario(name, weight, height, age)
         print(mensaje5)
