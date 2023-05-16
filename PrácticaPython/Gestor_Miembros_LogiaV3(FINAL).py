@@ -372,7 +372,7 @@ while stayCurious:
             continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
         else:
             print(Fore.LIGHTBLUE_EX + "DEMIURGO : Sólo el Gran Maestre " + Fore.RESET + Fore.LIGHTMAGENTA_EX + granmaestre[
-                "Nombre"] + Fore.RESET + " está autorizado para decidir el futuro de la logia." + Fore.RESET)
+                "Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " está autorizado para decidir el futuro de la logia." + Fore.RESET)
             continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
 
     else:
