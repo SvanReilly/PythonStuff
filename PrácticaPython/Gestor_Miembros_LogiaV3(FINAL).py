@@ -216,7 +216,7 @@ print(Fore.WHITE + "\n*Materializando Gran Maestre... Espere, por favor.*" + For
 
 sleep(2)
 
-mensaje = agregarUsuario(name, weight, height, age)
+mensaje = agregarUsuario(name, height, weight, age)
 
 print(mensaje)
 
