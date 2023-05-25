@@ -71,8 +71,8 @@ def calcularIMC(name):
 
     usuarioactual = seleccionarUsuario(name)
 
-    height = float(usuarioactual["Peso"])
-    weight = float(usuarioactual["Altura"])
+    height = float(usuarioactual["Altura"])
+    weight = float(usuarioactual["Peso"])
     IMC = round(weight / (height ** 2), 1)
 
     return IMC
