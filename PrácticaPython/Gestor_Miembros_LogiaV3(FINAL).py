@@ -323,7 +323,7 @@ while stayCurious:
                 print(Fore.LIGHTBLUE_EX + "DEMIURGO : Debe ingresar un número entero para la edad. Pruebe de nuevo.\n" + Fore.RESET)
                 verdad3 = True
 
-        mensaje5 = agregarUsuario(name, weight, height, age)
+        mensaje5 = agregarUsuario(name, height, weight, age)
         print(mensaje5)
         continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
 
