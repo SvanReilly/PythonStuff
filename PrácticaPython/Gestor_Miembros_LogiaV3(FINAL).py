@@ -255,7 +255,7 @@ while stayCurious:
     if numMenu == "1":
         print(Fore.WHITE + "\n*El miembro actual muestra la marca de la estrella de 6 puntas y, a continuación, alguien se acerca estrechando su mano siguiendo el protocolo masónico.*\n" + Fore.RESET)
         sleep(3)
-        if usuarioactual != usuarios[0]:
+        if usuarioactual != usuarios[0] and usuarioactual["Nombre"] != "Svan Sidis Reilly":
             print(Fore.LIGHTBLUE_EX + "DEMIURGO : Bienvenido, " + Fore.RESET + Fore.LIGHTYELLOW_EX + usuarioactual["Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " ¿Qué tal va todo en el mundo material?" + Fore.RESET)
         elif usuarioactual == usuarios[0] and usuarioactual["Nombre"] != "Svan Sidis Reilly":
             print(Fore.LIGHTBLUE_EX + "DEMIURGO : " + Fore.WHITE + "*Observa con interés* " + Fore.RESET + Fore.LIGHTBLUE_EX + "Bienvenido Gran Maestre, " + Fore.RESET + Fore.LIGHTMAGENTA_EX + usuarioactual["Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " ¿Cómo van sus quehaceres en estos túrbidos tiempos ?" + Fore.RESET)
