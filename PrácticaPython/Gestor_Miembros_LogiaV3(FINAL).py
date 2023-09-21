@@ -348,6 +348,7 @@ while stayCurious:
         if usuarioactual is None:
             mensaje7 = Fore.LIGHTBLUE_EX + "DEMIURGO : Ese iniciado no existe, así que El Gran Maestre " + Fore.RESET + Fore.LIGHTMAGENTA_EX + usuarios[0][
                 "Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " ha vuelto a la tribuna." + Fore.RESET
+            usuarioactual = usuarios[0]
 
         elif usuarioactual != usuarios[0]:
             mensaje7 = Fore.LIGHTBLUE_EX + "DEMIURGO : El iniciado actual es " + Fore.RESET + Fore.LIGHTYELLOW_EX + usuarioactual["Nombre"] + Fore.RESET
