@@ -257,6 +257,8 @@ while stayCurious:
         sleep(3)
         if usuarioactual != usuarios[0]:
             print(Fore.LIGHTBLUE_EX + "DEMIURGO : Bienvenido, " + Fore.RESET + Fore.LIGHTYELLOW_EX + usuarioactual["Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " ¿Qué tal va todo en el mundo material?" + Fore.RESET)
+        elif usuarioactual == usuarios[0] and usuarioactual["Nombre"] != "Svan Sidis Reilly":
+            print(Fore.LIGHTBLUE_EX + "DEMIURGO : " + Fore.WHITE + "*Observa con interés* " + Fore.RESET + Fore.LIGHTBLUE_EX + "Bienvenido Gran Maestre, " + Fore.RESET + Fore.LIGHTMAGENTA_EX + usuarioactual["Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " ¿Cómo van sus quehaceres en estos túrbidos tiempos ?" + Fore.RESET)
         else:
             print(Fore.LIGHTBLUE_EX + "DEMIURGO : " + Fore.WHITE + "*Sonríe* " + Fore.RESET + Fore.LIGHTBLUE_EX + "Bienvenido mi viejo amigo, " + Fore.RESET + Fore.LIGHTMAGENTA_EX + usuarioactual["Nombre"] + Fore.RESET + Fore.LIGHTBLUE_EX + " ¿Cómo va esa simulación de espacios no euclidianos en Unreal Engine 5?" + Fore.RESET)
         continueButton = str(input("\n- Pulse ENTER para continuar -\n"))
