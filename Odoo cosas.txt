@@ -1,0 +1,19 @@
+Instalar Odoo:
+- aom0016@alu.medac.es
+- pass: 1234
+- port: 5432
+
+StackBuilder:
+	- Database driver:	
+		- psqlODBC (64 bit)
+	- Database server:
+		- PostgreSQL (64-bit) (installed)
+
+Download directory:
+	- 
+
+
+
+- fj9u-6uir-sera
+-
+-

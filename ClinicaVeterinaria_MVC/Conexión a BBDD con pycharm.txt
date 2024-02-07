@@ -1,0 +1,47 @@
+Para conectarte a una base de datos PostgreSQL desde Python, puedes utilizar la biblioteca psycopg2, que es un adaptador de base de datos PostgreSQL para Python.
+Asegúrate de tenerla instalada antes de comenzar:
+
+	pip install psycopg2-binary
+
+Una vez que tengas psycopg2 instalado, puedes usar el siguiente código como punto de partida 
+para establecer una conexión a la base de datos PostgreSQL desde Python:
+
+import psycopg2
+
+# Parámetros de conexión
+database_name = "nombre_de_tu_base_de_datos"
+user = "tu_usuario"
+password = "tu_contraseña"
+host = "tu_host"  # Puede ser localhost si la base de datos está en tu máquina
+port = "tu_puerto"  # El puerto predeterminado para PostgreSQL es 5432
+
+# Intentar establecer una conexión
+try:
+    # Establecer conexión
+    connection = psycopg2.connect(
+        database=database_name,
+        user=user,
+        password=password,
+        host=host,
+        port=port
+    )
+
+    # Crear un cursor para ejecutar consultas
+    cursor = connection.cursor()
+
+    # Ejemplo de consulta
+    cursor.execute("SELECT version();")
+    version = cursor.fetchone()
+    print("Conectado a la base de datos PostgreSQL. Versión:", version)
+
+    # Realizar más operaciones aquí...
+
+except (Exception, psycopg2.Error) as error:
+    print("Error al conectar a la base de datos PostgreSQL:", error)
+
+finally:
+    # Cerrar el cursor y la conexión
+    if connection:
+        cursor.close()
+        connection.close()
+        print("Conexión cerrada.")
