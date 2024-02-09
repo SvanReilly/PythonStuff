@@ -1,54 +1,48 @@
-# Miguel Ángel Roldán de Haro
+# Alejandro Ortega Maldonado
 
-from Controller import Ficha_nueva, Imprimir_Fichas, get_Ficha_Mascota
+from Controller import new_card, print_cards, get_pet_card
+from colorama import *
 
-database_name = "nombre_de_tu_base_de_datos"
+database_name = "your_database_name"
 user = "admin"
 password = "1234"
 host = "localhost"  # Puede ser localhost si la base de datos está en tu máquina
 port = "5432"  # El puerto predeterminado para PostgreSQL es 5432
+
+
 def main():
-
     while True:
+        print(Fore.CYAN + "Vet" + Fore.LIGHTCYAN_EX + "eri" + Fore.BLUE + "nary" + " "
+              + Fore.LIGHTBLUE_EX + "Cli" + Fore.LIGHTGREEN_EX + "nic" + Fore.RESET)
         print("__________________________________________")
-        print("|     1. Ingresar Nueva Ficha            |")
-        print("|     2. Listar todas las Fichas         |")
-        print("|     3. Buscar Ficha por num de Socio   |")
+        print(Fore.LIGHTGREEN_EX + "|        1. Insert New Pet Card          |" + Fore.RESET)
+        print(Fore.MAGENTA + "|        2. List Every Pet Card          |" + Fore.RESET)
+        print(Fore.YELLOW + "|        3. Search by Member Nº          |" + Fore.RESET)
         print("__________________________________________")
-        opcion = input("Seleccione una opción (1 , 2 o 3): ")
-        
-        if opcion == '1':
-            Ficha_nueva()
-        elif opcion == '2':
-            Imprimir_Fichas()
-        elif opcion == '3':
-            get_Ficha_Mascota()
+        option = input(Fore.RED + "Select an option" + Fore.RESET + " ("
+                       + Fore.BLUE + "1" + ", "
+                       + Fore.YELLOW + "2" + Fore.RESET + " or "
+                       + Fore.GREEN + "3" + Fore.RESET + "): ")
+
+        if option == '1':
+            new_card()
+        elif option == '2':
+            print_cards()
+        elif option == '3':
+            get_pet_card()
         else:
-            print("Opción no válida. Por favor, seleccione 1, 2 o 3.")
+            print("Not a valid option")
 
-        continuar = input("¿Desea realizar otra operación? (s/n): ")
+        continue_input = input("Wish to make another request (y/n): ")
 
-        if continuar.lower() == 'n':
-            print("CERRANDO SESIÓN...")
+        if continue_input.lower() == 'n':
+            print("Logging out...")
             print("_________________________________________")
 
-        elif continuar.lower() != 's':
-            print("Entrada inválida. Por favor, ingrese 's' o 'n'.")
+        elif continue_input.lower() != 'y':
+            print("Invalid Entry. please 'y' or 'n'.")
 
-def banner():
-    cartel = r"""
-      ____ _ _       _            __     __   _            _                  _       
-     / ___| (_)_ __ (_) ___ __ _  \ \   / /__| |_ ___ _ __(_)_ __   __ _ _ __(_) __ _ 
-    | |   | | | '_ \| |/ __/ _` |  \ \ / / _ \ __/ _ \ '__| | '_ \ / _` | '__| |/ _` |
-    | |___| | | | | | | (_| (_| |   \ V /  __/ ||  __/ |  | | | | | (_| | |  | | (_| |
-     \____|_|_|_| |_|_|\___\__,_|    \_/ \___|\__\___|_|  |_|_| |_|\__,_|_|  |_|\__,_|
-                                                                                                                                  
-    """
-    print(cartel)
 
 if __name__ == "__main__":
-
-    banner()
-    print("______________________________________________________________________________________")
     print()
     main()

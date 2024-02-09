@@ -1,61 +1,61 @@
-# Miguel Ángel Roldán de Haro
+# Alejandro Ortega Maldonado
 
-from Model import FichaMascota
+from Model import PetCard
 
 
 # Lista vacía para almacenar las fichas de mascotas
-BDFichasMascotas = []
+BDPetCards = []
 
 # Función para obtener una ficha por número de socio
-def get_Ficha_Mascota():
+def get_pet_card():
 
     
-    numero_socio = int(input("Ingrese el número de socio: "))
+    member_number = int(input("Insert a member number: "))
     
     # Recorre la lista de fichas de mascotas
-    for ficha in BDFichasMascotas:
+    for card in BDPetCards:
 
         # Si se encuentra una ficha con el número de socio ingresado
-        if ficha.num_socio == numero_socio:
+        if card.member_number == member_number:
 
             # Se imprime ficha encontrada
             print("_________________________________")
-            print("Ficha encontrada:", "\n")
-            print(f"Número de Socio: {ficha.num_socio}", "\n")
-            print(f"Nombre de la Mascota: {ficha.nombre_mascota}", "\n")
-            print(f"Tipo de Mascota: {ficha.tipo_mascota}", "\n")
+            print("Found card:", "\n")
+            print(f"Member Number: {card.member_number}", "\n")
+            print(f"Pet's Name: {card.pet_name}", "\n")
+            print(f"Pet Type: {card.pet_type}", "\n")
             return
         
     # Si no se encuentra ficha
-    print("El número de usuario no es válido o no existe.")
+    print("This member number doesn't exist or has a typo.")
 
 
 
 # Función para agregar nueva ficha
-def set_Ficha_Mascota(ficha_mascota):
+def set_pet_card(pet_card):
 
     # Se agrega la ficha de mascota recibida como parámetro a la lista BDFichasMascotas
-    BDFichasMascotas.append(ficha_mascota)
+    BDPetCards.append(pet_card)
 
 
 # Función para crear nueva ficha
-def Ficha_nueva():
-    num_socio = int(input("Ingrese el número de socio: "))
-    nombre_mascota = input("Ingrese el nombre de la mascota: ")
-    tipo_mascota = input("Ingrese el tipo de mascota: ")
-    ficha_mascota = FichaMascota(num_socio, nombre_mascota, tipo_mascota)
-    set_Ficha_Mascota(ficha_mascota)
+def new_card():
+    member_number = int(input("Insert Member Number: "))
+    pet_name = input("Insert Pet's Name: ")
+    pet_type = input("Insert Pet Type: ")
+    pet_card = PetCard(member_number, pet_name, pet_type)
+    set_pet_card(pet_card)
 
 # Función para imprimir todas las fichas
-def Imprimir_Fichas():
+def print_cards():
     print("_________________________________")
-    print("| Listado de Fichas de Mascotas |")
+    print("| Pet Cards List |")
     print("_________________________________")
     print()
 
-    for ficha in BDFichasMascotas:
-        print("Número de Socio:", ficha.num_socio, "\n")
-        print("Nombre de la Mascota:", ficha.nombre_mascota, "\n")
-        print("Tipo de Mascota:", ficha.tipo_mascota, "\n")
+    for card in BDPetCards:
+        print("Member Number:", card.member_number, "\n")
+        print("Pet's Name:", card.pet_name, "\n")
+        print("Pet Type:", card.pet_type, "\n")
     print("_____________________________________") 
 
