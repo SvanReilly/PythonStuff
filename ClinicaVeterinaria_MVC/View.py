@@ -11,7 +11,8 @@ port = "5432"  # El puerto predeterminado para PostgreSQL es 5432
 
 
 def main():
-    while True:
+    system = True
+    while system:
         print(Fore.CYAN + "Vet" + Fore.LIGHTCYAN_EX + "eri" + Fore.BLUE + "nary" + " "
               + Fore.LIGHTBLUE_EX + "Cli" + Fore.LIGHTGREEN_EX + "nic" + Fore.RESET)
         print("__________________________________________")
@@ -41,6 +42,7 @@ def main():
         if continue_input.lower() == 'n':
             print("Logging out...")
             print("_________________________________________")
+            system = False
 
         elif continue_input.lower() != 'y':
             print("Invalid Entry. please 'y' or 'n'.")
