@@ -27,9 +27,12 @@ def main():
         if option == '1':
             new_card()
         elif option == '2':
-            print_cards()
+            member_pet_list = print_cards()
+            print(Fore.YELLOW + "___________________" + Fore.RESET + "\n" + member_pet_list)
         elif option == '3':
-            get_pet_card()
+            member_number = int(input("Insert a member number: "))
+            member_pet_list = get_pet_card(member_number)
+            print(Fore.YELLOW + "___________________" + Fore.RESET + "\n" + member_pet_list)
         else:
             print("Not a valid option")
 

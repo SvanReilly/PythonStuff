@@ -1,40 +1,31 @@
 # Alejandro Ortega Maldonado
 
 from Model import PetCard
-
+from colorama import *
 
 # Lista vacía para almacenar las fichas de mascotas
 BDPetCards = []
 
+
 # Función para obtener una ficha por número de socio
-def get_pet_card():
+def get_pet_card(member_number):
+    show_me_pet_list = []
 
-    
-    member_number = int(input("Insert a member number: "))
-    
-    # Recorre la lista de fichas de mascotas
     for card in BDPetCards:
-
-        # Si se encuentra una ficha con el número de socio ingresado
         if card.member_number == member_number:
+            # Almacenar una tupla (nombre, tipo) en lugar de solo el nombre
+            show_me_pet_list.append((card.pet_name, card.pet_type))
 
-            # Se imprime ficha encontrada
-            print("_________________________________")
-            print("Found card:", "\n")
-            print(f"Member Number: {card.member_number}", "\n")
-            print(f"Pet's Name: {card.pet_name}", "\n")
-            print(f"Pet Type: {card.pet_type}", "\n")
-            return
-        
+    # Concatenar el nombre y el tipo de mascota en la cadena vertical
+    vertical_list = "\n\n".join(f"Name:{pet_name} \nType: {pet_type}" for pet_name, pet_type in show_me_pet_list)
+    return vertical_list
+
     # Si no se encuentra ficha
     print("This member number doesn't exist or has a typo.")
 
 
-
 # Función para agregar nueva ficha
 def set_pet_card(pet_card):
-
-    # Se agrega la ficha de mascota recibida como parámetro a la lista BDFichasMascotas
     BDPetCards.append(pet_card)
 
 
@@ -45,6 +36,7 @@ def new_card():
     pet_type = input("Insert Pet Type: ")
     pet_card = PetCard(member_number, pet_name, pet_type)
     set_pet_card(pet_card)
+
 
 # Función para imprimir todas las fichas
 def print_cards():
@@ -57,5 +49,4 @@ def print_cards():
         print("Member Number:", card.member_number, "\n")
         print("Pet's Name:", card.pet_name, "\n")
         print("Pet Type:", card.pet_type, "\n")
-    print("_____________________________________") 
-
+    print("_____________________________________")

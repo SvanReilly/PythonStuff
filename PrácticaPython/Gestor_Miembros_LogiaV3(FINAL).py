@@ -41,7 +41,6 @@ def seleccionarUsuario(name):
 
             usuarioactual = None
 
-
     return usuarioactual
 
 # Establecer los permisos del antiguo maestre en False y los del nuevo maestre en True (aparentemente hecho)
